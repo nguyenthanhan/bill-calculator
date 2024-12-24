@@ -1,0 +1,19 @@
+{
+  "name": "bill-calculator",
+  "version": "1.0.0",
+  "description": "A utility to calculate individual bill splits and fees",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "reset": "rm -rf data.txt && cp initData.txt data.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calculator",
+    "bill-split",
+    "utility"
+  ],
+  "author": "heimer",
+  "license": "ISC",
+  "packageManager": "yarn@1.22.22"
+}
