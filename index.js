@@ -37,9 +37,9 @@ const calculateIndividualPrices = (data) => {
       return { ...info, text: null };
     }
 
-    if (name === "Heimer") {
-      return { ...info, text: null };
-    }
+    // if (name === "Heimer") {
+    //   return { ...info, text: null };
+    // }
 
     const individualPrice = originalPrice.map((price) =>
       price === 0 ? 0 : ((price / totalPrices) * bill).toFixed(2)
@@ -88,7 +88,7 @@ const calculateIndividualPrices = (data) => {
   console.log("parsedInfos", parsedInfos);
 
   const parsedInfosString = parsedInfos
-    .filter((i) => i.text)
+    .filter((i) => i.text && i.name !== "Heimer")
     .map((i) => i.text)
     .join("\n");
 
